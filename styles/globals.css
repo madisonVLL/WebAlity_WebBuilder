@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #E0E5C6;
+  --foreground: #15310B;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #15310B;
+    --foreground: #E0E5C6;
+  }
+}
+
+body {
+  background-color: #E0E5C6; /* light sage green */
+  color: #15310B; /* dark navy green */
+  font-family: Georgia, serif; /* professional font */
+}
+
+.coolGrade {
+  background: -webkit-linear-gradient(right,#7aa06a, #165d2c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: larger;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
