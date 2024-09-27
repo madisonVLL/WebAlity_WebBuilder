@@ -12,26 +12,25 @@ const Home = () => {
         <div className="py-2 flex items-center justify-center">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 w-full">
                 <Link href="/portfolio">
-                    <div className="bg-white shadow-lg rounded-lg p-6 text-center">
+                    <div className="bg-white shadow-lg rounded-lg p-6 text-center hover:text-white hover:bg-navyGreen">
                     <h2 className="text-xl font-semibold mb-4">Portfolio</h2>
                     <p>
-                        Learn more about our mission, values, and the story behind our business.
+                    From websites showcasing hospitality and culinary expertise to AI-powered technologies WebAlity is here to help. Get inspired by viewing our portfolio to see how your online dreams can become a reality.
                     </p>
                     </div>
                 </Link>
                 <Link href="/services">
-                    <div className="bg-white shadow-lg rounded-lg p-6 text-center">
+                    <div className= "bg-white shadow-lg rounded-lg p-6 text-center hover:text-white hover:bg-navyGreen">
                     <h2 className="text-xl font-semibold mb-4">Services</h2>
                     <p>
-                        View our opening hours and stay updated on our availability throughout the week.
-                    </p>
+                    Whether you're launching your restaurant's first website or refreshing your online presence, WebAlity helps showcase your best self to new and returning customers. Focus on serving your guests while we handle the digital side.</p>
                     </div>
                 </Link>
                 <Link href="/contact">
-                    <div className="bg-white shadow-lg rounded-lg p-6 text-center">
+                    <div className= "bg-white shadow-lg rounded-lg p-6 text-center hover:text-white hover:bg-navyGreen">
                     <h2 className="text-xl font-semibold mb-4">Contact Us</h2>
                     <p>
-                        See what our customers have to say about their experience with us.
+                    Ready to bring your website to life? Reach out, and together we’ll craft a website that not only looks great but seamlessly connects all the latest web features to keep your business ahead of the curve.
                     </p>
                     </div>
                 </Link>

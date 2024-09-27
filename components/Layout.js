@@ -1,9 +1,14 @@
+"use client"
 import Link from 'next/link';
 import Image from 'next/image';
+import React from 'react';
 import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faBarsStaggered} from '@fortawesome/free-solid-svg-icons';
 import logo from "../public/favicon.ico"
 
 const Layout = ({ children }) => {
+    const [showMobile, setShowMobile] = useState(false)
   return (
     <div className="min-h-screen flex flex-col">
       <header className="bg-white shadow-lg">
@@ -34,57 +39,35 @@ const Layout = ({ children }) => {
 
             {/* Mobile Menu Button */}
             <div className="flex items-center md:hidden hover:stroke-[#E0E5C6]">
-                <svg
-                  className="h-10 w-10"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h16m-7 6h7"
-                    className="peer-checked:hidden"
-                />
-                <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M6 18L18 6M6 6l12 12"
-                    className="hidden peer-checked:block"
-                />
-                </svg>
+                <FontAwesomeIcon icon={faBarsStaggered} size="xl" style={{color: "#15310B"}} onClick={() => {setShowMobile(!showMobile)}}/>
             </div>
           </div>
 
           {/* Mobile Menu */}
-          <div className="md:hidden hidden peer-checked:block">
+          {showMobile && 
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <Link href="/">
-                <p className="text-[#15310B]  hover:text-[#E0E5C6] block px-3 py-2 rounded-md text-base font-medium">
-                  Home
-                </p>
-              </Link>
-              <Link href="/about">
-                <p className="text-[#15310B]  hover:text-[#E0E5C6] block px-3 py-2 rounded-md text-base font-medium">
-                  About Us
-                </p>
-              </Link>
-              <Link href="/services">
-                <p className="text-[#15310B]  hover:text-[#E0E5C6] block px-3 py-2 rounded-md text-base font-medium">
-                  Services
-                </p>
-              </Link>
-              <Link href="/contact">
-                <p className="text-[#15310B]  hover:text-[#E0E5C6] block px-3 py-2 rounded-md text-base font-medium">
-                  Contact Us
-                </p>
-              </Link>
-            </div>
+            <Link href="/" onClick={() => {setShowMobile(!showMobile)}}>
+              <p className="text-[#15310B]  hover:text-[#E0E5C6] block px-3 py-2 rounded-md text-base font-medium">
+                Home
+              </p>
+            </Link>
+            <Link href="/portfolio" onClick={() => {setShowMobile(!showMobile)}}>
+              <p className="text-[#15310B]  hover:text-[#E0E5C6] block px-3 py-2 rounded-md text-base font-medium">
+                Portfolio
+              </p>
+            </Link>
+            <Link href="/services" onClick={() => {setShowMobile(!showMobile)}}>
+              <p className="text-[#15310B]  hover:text-[#E0E5C6] block px-3 py-2 rounded-md text-base font-medium">
+                Services
+              </p>
+            </Link>
+            <Link href="/contact" onClick={() => {setShowMobile(!showMobile)}}>
+              <p className="text-[#15310B]  hover:text-[#E0E5C6] block px-3 py-2 rounded-md text-base font-medium">
+                Contact Us
+              </p>
+            </Link>
           </div>
+          }
         </nav>
       </header>
 
