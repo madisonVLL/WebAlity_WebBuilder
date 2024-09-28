@@ -6,10 +6,16 @@ const serviceFeatures = [{title: "Website Building", description: "Build respons
 
 const Service = ({service}) => {
     return (
-        <div className="bg-white shadow-lg rounded-lg p-6 text-center hover:text-white hover:bg-navyGreen">
-            <h2 className='text-2xl font-bold'>{service.title}</h2>
-            <p>{service.description}</p>
-            <h2 className='bg-navyGreen shadow-md rounded-md p-1 m-2 text-white'>${service.price}</h2>
+        <div className="bg-white shadow-xl rounded-lg p-6 text-center hover:text-white hover:bg-navyGreen h-full flex flex-col space-y-*">
+            <div>
+                <h2 className='text-2xl font-bold'>{service.title}</h2>
+            </div>
+            <div>
+                <p>{service.description}</p>
+            </div>
+            <div className='content-center'>
+                <h2 className='bg-navyGreen shadow-md rounded-md p-1 m-2 text-white'>${service.price}</h2>
+            </div>
         </div>
     )
 
@@ -24,9 +30,13 @@ const Services = () => {
     }
   return (
     <Layout>
-       <div className="m-2 flex items-center justify-center h-full">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 w-full" key="">
-                {items.map((category) => <span>{category}</span>)}
+        <div className='p-4'>
+            <div className='mb-2 p-2'>
+                <h1 className='text-4xl font-black'>Services</h1>
+                <p className='text-2xl italic'>Explore the services WebAlity offers to craft the perfect website, ensuring your customers stay informed, engaged, and inspired, highlighting the positive experiences they have with your brand both on and offline.</p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 w-full">
+            {items.map((category) => <span>{category}</span>)}
             </div>
         </div>
     </Layout>

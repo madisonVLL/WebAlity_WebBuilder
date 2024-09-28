@@ -5,7 +5,7 @@ import signature from "../public/web_sign.png"
 const Privacy = () => {
   return (
     <Layout>
-      <div className="m-5">
+      <div className="p-4">
         <h1>Privacy Policy</h1>
         <p><strong>Effective Date:</strong> September 4th, 2024</p>
         <br></br>

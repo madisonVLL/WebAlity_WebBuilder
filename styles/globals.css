@@ -4,19 +4,20 @@
 
 :root {
   --background: #E0E5C6;
-  --foreground: #15310B;
+  --foreground: #1b2418;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #15310B;
+    --background: #1b2418;
     --foreground: #E0E5C6;
   }
 }
 
 body {
+  background-image: url("../public/images/lighterbg.png");
   background-color: #E0E5C6; /* light sage green */
-  color: #15310B; /* dark navy green */
+  color: #1b2418; /* dark navy green */
   font-family: Georgia, serif; /* professional font */
 }
 

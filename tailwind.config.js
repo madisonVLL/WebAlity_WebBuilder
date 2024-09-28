@@ -9,11 +9,14 @@ module.exports = {
     extend: {
       colors: {
         sageGreen: '#E0E5C6',
-        navyGreen: '#15310B',
+        navyGreen: '#1b2418',
       },
       fontFamily: {
         professional: ['Georgia', 'serif'],
       },
+      backgroundImage: {
+        sageBackground: "url('//public/images/lighterbg.png')"
+      }
     },
   },
   plugins: [],
