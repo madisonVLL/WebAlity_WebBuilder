@@ -6,7 +6,8 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faBarsStaggered} from '@fortawesome/free-solid-svg-icons';
 import logo from "../public/favicon.ico"
-import Background from "../public/images/smallerbg.png"
+import Background from "../public/images/lighterbg.png"
+
 
 const Layout = ({ children }) => {
     const [showMobile, setShowMobile] = useState(false)

@@ -15,7 +15,7 @@ const Contact = () => {
                 <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-3 w-full text-center">
                     <Link href="" target='_blank' className="bg-white shadow-xl rounded-xl p-6 text-center justify-center hover:text-white hover:bg-navyGreen">
                         <p className='text-xl font-bold'>Email</p>
-                        <FontAwesomeIcon icon={faEnvelope} size="4x" className='bg-sageGreen shadow-md rounded-full p-3 m-2'/>
+                        <FontAwesomeIcon icon={faEnvelope} size="3x" className='m-4'/>
                         <p>Please email us to let us know if you'd love to form a partnership, book a consoluation, or to set up some time to discuss our services and mission. </p>
                     </Link>
                     <Link href="https://calendly.com/madison-landlocket/30min" target='_blank' className="bg-white shadow-xl rounded-lg p-6 text-center justify-center justify-center hover:text-white hover:bg-navyGreen">
